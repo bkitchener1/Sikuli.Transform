@@ -1,0 +1,26 @@
+*** Settings ***
+Library           trans.Transform    WITH NAME    Transform
+
+*** Test Cases ***
+Create New Session
+    Start App
+    Verify App
+    Start New Session    ProtoTest Session
+    Set Default Preferences
+
+Open Production Dashboard
+    openDashboard    Production
+    Verify Tour Links
+    Show Production Layer
+    Verify Style Dialogue
+
+Default Perspective
+    Import DEM
+    Open Default Perspective
+    Create Depth Scene
+    Open Depth Scene Tab
+    Render In 3d Scene
+    Show 3d Controls
+
+Test
+    Open Session
